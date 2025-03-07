@@ -20,7 +20,7 @@ def add_riff_metadata(input_wav_path, output_wav_path, metadata_dict):
     if "Composers" in metadata_dict:
         metadata_bytes += encode_riff_info("IART", metadata_dict["Composers"])
     if "Source Program" in metadata_dict:
-        metadata_bytes += encode_riff_info("IALB", metadata_dict["Source Program"])
+        metadata_bytes += encode_riff_info("IPRD", metadata_dict["Source Program"])
     comments = []
     if "BPM" in metadata_dict:
         comments.append(f"BPM: {metadata_dict['BPM']}")
